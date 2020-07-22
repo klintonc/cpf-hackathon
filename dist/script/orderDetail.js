@@ -1,4 +1,14 @@
 (() => {
+    const openModal = () => {
+        $('#open-modal').on('click', () => {
+            $('#edit-driver-page').modal({
+                escapeClose: false,
+                clickClose: false,
+                showClose: false
+            });
+        })
+    }
+
     const onButtonClicked = () => {
         $('#will-deliver').on('click', () => {
             $('#delivered-done').removeClass('active');
@@ -18,6 +28,7 @@
         $('.right-block-right-box').hide();
 
         onButtonClicked();
+        openModal();
     }
     run();
 })();
