@@ -19,7 +19,7 @@
         secs = secs < 10 ? '0' + secs : secs;
         document.getElementById('title-date-time').innerHTML = `${hours}:${mins}:${secs} น.`;
         document.getElementById('title-date').innerHTML = `${now.getDate()} ${thaiMonth[now.getMonth()]} ${0+now.getFullYear()+543}`;
-        setInterval(displayDate, 500);
+        setTimeout(displayDate, 500);
     }
 
     const onButtonClicked = () => {
