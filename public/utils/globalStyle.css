@@ -301,6 +301,65 @@ input:focus {
     border-color: var(--green) !important;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Phone: the sidebar becomes a bottom tab bar */
+@media (max-width: 768px) {
+    .outside-container {
+        flex-direction: column;
+    }
+
+    .menu-side {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        flex-direction: row;
+        padding: 6px 0 calc(6px + env(safe-area-inset-bottom));
+        box-shadow: 0 -6px 24px -12px rgba(0, 0, 0, .3);
+    }
+
+    .menu-list {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .menu-list-container {
+        margin: 0;
+    }
+
+    .menu-list-item {
+        width: 36px;
+        height: 36px;
+    }
+
+    .menu-list-item img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .menu-list-title {
+        font-size: .85em;
+    }
+
+    .menu-side > .profile {
+        display: none;
+    }
+
+    .container {
+        padding: 20px 16px 96px;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
