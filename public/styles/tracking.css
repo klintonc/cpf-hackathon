@@ -168,3 +168,53 @@ td a{
     height: 25px;
     cursor: pointer;
 }
+
+/* ---------- Responsive ---------- */
+.column {
+    transition: background-color .2s var(--ease);
+}
+
+tr:hover > td.column:not(.active) {
+    background-color: #F1F8F4;
+}
+
+@media (max-width: 1024px) {
+    .map-status {
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 16px;
+    }
+
+    #big-map,
+    .delivery-group {
+        width: 100%;
+    }
+
+    .delivery-group {
+        padding: 20px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    table > tbody {
+        display: table;
+        width: 100%;
+        min-width: 760px;
+        border-collapse: separate;
+        border-spacing: 0 7px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title,
+    .title-date {
+        font-size: 1.6em;
+    }
+
+    #big-map {
+        height: 300px;
+    }
+}
