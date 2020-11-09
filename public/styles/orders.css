@@ -221,3 +221,65 @@ tr:last-child td:last-child {
     border-radius: 50%;
     cursor: pointer;
   }
+
+/* ---------- Responsive ---------- */
+.summary-number {
+    line-height: 1.1;
+}
+
+.list-of-order {
+    overflow-x: auto;
+}
+
+@media (max-width: 1024px) {
+    .summary-order-block {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .summary-box {
+        width: auto;
+    }
+
+    .map-status {
+        flex-direction: column;
+    }
+
+    .button-trigger,
+    .delivery-group {
+        width: 100%;
+    }
+
+    .delivery-group {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.8em;
+    }
+
+    .title-date {
+        font-size: 1.8em;
+    }
+
+    .summary-text {
+        font-size: 1em;
+        gap: 8px;
+    }
+
+    .summary-number {
+        font-size: 2em;
+    }
+
+    #big-map {
+        height: 300px;
+        margin-top: 1em;
+    }
+
+    .list-of-order table {
+        min-width: 560px;
+    }
+}
