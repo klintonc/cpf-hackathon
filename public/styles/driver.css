@@ -104,3 +104,49 @@ tr:last-child td:last-child {
     flex-direction: row;
     align-items: center;
 }
+
+/* ---------- Responsive ---------- */
+.title-report {
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.list-of-driver {
+    overflow-x: auto;
+}
+
+.list-of-driver tr:not(:first-child) {
+    cursor: pointer;
+}
+
+.larg-arrow .arrow-right {
+    transition: transform .2s var(--ease);
+}
+
+tr:hover .larg-arrow .arrow-right {
+    transform: translateX(4px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.8em;
+    }
+
+    .title-date {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .branch,
+    .daterange {
+        flex: 1 1 200px;
+        margin-left: 0;
+        font-size: 1.1em;
+    }
+
+    table {
+        font-size: 1.2em;
+        min-width: 620px;
+    }
+}
