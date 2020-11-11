@@ -142,3 +142,68 @@
 .contact-inside{
     width: 78%;
 }
+
+/* ---------- Responsive ---------- */
+.driver-profile-lg {
+    object-fit: cover;
+}
+
+.medal {
+    transition: transform .25s var(--ease);
+}
+
+.column-layout:hover .medal {
+    transform: translateY(-3px) scale(1.06);
+}
+
+@media (max-width: 1024px) {
+    .divider-block {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .left-block,
+    .right-block {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .divider-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .left-block-left,
+    .left-block-right {
+        width: 100%;
+    }
+
+    .left-block-right {
+        display: flex;
+        justify-content: center;
+    }
+
+    .driver-profile-lg {
+        width: 140px;
+        height: 140px;
+    }
+
+    .big-title {
+        font-size: 1.6em;
+    }
+
+    .brief-title {
+        width: 40%;
+    }
+
+    .divider {
+        width: 100%;
+    }
+
+    .box {
+        padding: 16px;
+        overflow-x: auto;
+    }
+}
