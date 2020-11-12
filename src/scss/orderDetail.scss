@@ -145,3 +145,31 @@
 .modal-item-container .rounded-btn{
   font-size: 1.3em;
 }
+// ---------- Responsive ----------
+@media (max-width: 1024px) {
+  .driver-update-container-order,
+  .right-block-left-box,
+  .right-block-right-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .driver-update-container-order {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .preparing-order-text {
+    font-size: 1.5em;
+  }
+
+  .rectangele-btn {
+    margin-left: 0;
+  }
+
+  #edit-driver-page {
+    max-width: 92vw;
+  }
+}
